@@ -1,2 +1,2 @@
 # canBitTimeCalc
-Simple CAN bit SEG1&amp; SEG22 timing calculator
+Simple CAN bit SEG1&amp; SEG2 timing calculator
