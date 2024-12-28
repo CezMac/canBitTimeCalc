@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 import matplotlib.pyplot as plt
 
 def find_can_parameters(clock_mcu, target_sampling_point, target_speed_kbps):
@@ -41,9 +40,9 @@ def visualize_can_parameters_graphically(seg1, seg2, sampling_point, bit_time, t
     ax.set_ylim([-1, 1])
     ax.axis("off")
     plt.legend()
-    plt.title("CAN Bit Segments Visualization")
+    plt.title("STM32 CAN Bit Segments Visualization")
 
-    ax.text(total_segments / 2, -0.8, f'TQ Time: {tq_time:.2f} us\nSEG1 Time: {seg1 * tq_time:.2f} us\n SEG1: {seg1}\nSEG2 Time: {seg2 * tq_time:.2f} us\n SEG2: {seg2}\nTotal Bit Time: {bit_time:.2f} us\nSampling Point: {sampling_point:.2f} %\nCAN Bus speed: {speed_kbps:.2f} kbit/s', horizontalalignment='center', verticalalignment='center')
+    ax.text(total_segments / 2, -0.9, f'MCU Clock: {clock_mcu} Hz\n Prescaler: {prescaler}\n TQ Time: {tq_time:.2f} us\nSEG1 Time: {seg1 * tq_time:.2f} us\n SEG1: {seg1}\nSEG2 Time: {seg2 * tq_time:.2f} us\n SEG2: {seg2}\nTotal Bit Time: {bit_time:.2f} us\nSampling Point: {sampling_point:.2f} %\nCAN Bus speed: {speed_kbps:.2f} kbit/s', horizontalalignment='center', verticalalignment='center')
 
     plt.show()
 
